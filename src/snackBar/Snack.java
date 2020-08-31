@@ -8,15 +8,17 @@ public class Snack {
     private int quantity;
     private double cost;
     private int vendingMachineId; 
+    private String vendingMachine;
 
     //constructor
-    public Snack(String name, int quantity, double cost, int vendingMachineId){
+    public Snack(String name, int quantity, double cost, int vendingMachineId, String vendingMachine){
         maxId++;
         id = maxId;
         this.name = name;
         this.quantity = quantity;
         this.cost = cost;
         this.vendingMachineId = vendingMachineId;
+        this.vendingMachine = vendingMachine;
     }
  
 
@@ -35,6 +37,9 @@ public class Snack {
     }
     public int getQuantity(){
         return quantity;
+    }
+    public String getVendingMaching(){
+        return vendingMachine;
     }
   
 
@@ -71,8 +76,8 @@ public class Snack {
     public String toString(){
         String rtnStr = 
         "Snack: " + name + "\n" + 
-        "Vending Machine:" + vendingMachineId + "\n" + 
-        "Quantity:" + quantity + "\n" + 
+        "Vending Machine: " + vendingMachine + "\n" + 
+        "Quantity: " + quantity + "\n" + 
         "Total Cost: $" + getTotal(getCost(), getQuantity());
   
         return rtnStr;

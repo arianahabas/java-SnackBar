@@ -12,12 +12,12 @@ public class Main {
         VendingMachine drink = new VendingMachine("Drink");
         VendingMachine office = new VendingMachine("Office");
 
-        // String name, int quantity, double cost, int vendingMachineId
-        Snack chips = new Snack("Chips", 36, 1.75, food.getId());
-        Snack choco = new Snack("Chocolate Bar", 36, 1.00, food.getId());
-        Snack pretzel = new Snack("Pretzel", 30, 2.00, food.getId());
-        Snack soda = new Snack("Soda", 24, 2.50, drink.getId());
-        Snack water = new Snack("Water", 20, 2.75, drink.getId());
+        // String name, int quantity, double cost, int vendingMachineId, String vendingMachine
+        Snack chips = new Snack("Chips", 36, 1.75, food.getId(), "Food");
+        Snack choco = new Snack("Chocolate Bar", 36, 1.00, food.getId(), "Food");
+        Snack pretzel = new Snack("Pretzel", 30, 2.00, food.getId(), "Food");
+        Snack soda = new Snack("Soda", 24, 2.50, drink.getId(), "Drink");
+        Snack water = new Snack("Water", 20, 2.75, drink.getId(), "Drink");
 
         // PROBLEM 1: Customer 1 (Jane) buys 3 of snack 4 (Soda).
         jane.setCash(jane.buySnacks(3, soda.getCost(), jane.getCash()));
